@@ -84,3 +84,21 @@ function addData(data) {
 
   dessertsContainer.innerHTML = html;
 }
+
+const openDialogBtn = document.getElementById("confirmBtn");
+const closeDialogBtn = document.getElementById("newBtn");
+const dialog = document.querySelector("dialog");
+
+openDialogBtn.addEventListener("click", () => {
+  dialog.showModal();
+  document.body.classList.add("dialog-open");
+});
+
+closeDialogBtn.addEventListener("click", () => {
+  dialog.close();
+  document.body.classList.remove("dialog-open");
+});
+
+const addToCartBtn = document.querySelectorAll(".desserts__cart-btn");
+const desertImg = document.querySelectorAll(".desserts__image");
+const qtyBtns = document.querySelectorAll(".desserts__quantity");

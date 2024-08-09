@@ -128,10 +128,56 @@
               </p>
             </div>
 
-            <button class="cart__btn">Confirm Order</button>
+            <button id="confirmBtn" class="cart__btn">Confirm Order</button>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog class="dialog">
+      <div class="dialog__content">
+        <div class="dialog__header">
+          <img
+            class="dialog__image"
+            src="assets/images/icon-order-confirmed.svg"
+            alt="Order Confirmed"
+          />
+          <h2 class="dialog__title">Order Confirmed</h2>
+          <p class="dialog__message">We hope you enjoy your food!</p>
+        </div>
+
+        <div class="dialog__cart">
+          <div class="cart-item">
+            <div class="cart-item__wrap">
+              <img
+                class="cart-item__image"
+                src="assets/images/image-tiramisu-thumbnail.jpg"
+                alt="Classic Tiramisu"
+              />
+              <div class="cart-item__details">
+                <p class="cart-item__name">Classic Tiramisu</p>
+                <div class="cart-item__quantity">
+                  <p class="cart-item__qty">2x</p>
+                  <span class="cart-item__price-unit">@$5.50</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="cart-item__price-total">$5.50</span>
+          </div>
+
+          <hr class="cart__divider" />
+
+          <div class="cart__total">
+            <p class="cart__total-label">Order Total</p>
+            <p class="cart__total-price">$46.50</p>
+          </div>
+        </div>
+
+        <button autofocus id="newBtn" class="dialog__btn cart__btn">
+          Start New Order
+        </button>
+      </div>
+    </dialog>
   </body>
 </html>
