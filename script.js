@@ -1,9 +1,8 @@
 "use strict";
 
 const dessertsContainer = document.querySelector(".desserts__container");
-const url = "data.json";
 
-fetch(url)
+fetch("data.json")
   .then((res) => {
     if (!res.ok) {
       throw new Error(`Network response was not ok: ${res.statusText}`);
@@ -11,13 +10,13 @@ fetch(url)
     return res.json();
   })
   .then((data) => {
-    addData(data);
+    addItems(data);
   })
   .catch((err) => {
     dessertsContainer.innerHTML = `Error fetching data: ${err.message}`;
   });
 
-function addData(data) {
+function addItems(data) {
   let html = "";
 
   data.forEach((item) => {
@@ -45,6 +44,8 @@ function addData(data) {
           <div class="desserts__quantity">
             <button class="desserts__qty-decrement qty-crement">
               <svg
+                aria-hidden="true"
+                focusable="false"
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
                 height="2"
@@ -57,6 +58,8 @@ function addData(data) {
             <span class="desserts__qty-value">1</span>
             <button class="desserts__qty-increment qty-crement">
               <svg
+                aria-hidden="true"
+                focusable="false"
                 xmlns="http://www.w3.org/2000/svg"
                 width="10"
                 height="10"
@@ -85,9 +88,9 @@ function addData(data) {
   dessertsContainer.innerHTML = html;
 }
 
-const openDialogBtn = document.getElementById("confirmBtn");
-const closeDialogBtn = document.getElementById("newBtn");
 const dialog = document.querySelector("dialog");
+const openDialogBtn = document.querySelector(".open-dialog");
+const closeDialogBtn = document.querySelector(".close-dialog");
 
 openDialogBtn.addEventListener("click", () => {
   dialog.showModal();
@@ -99,6 +102,17 @@ closeDialogBtn.addEventListener("click", () => {
   document.body.classList.remove("dialog-open");
 });
 
+const desertsImage = document.querySelectorAll(".desserts__image");
 const addToCartBtn = document.querySelectorAll(".desserts__cart-btn");
-const desertImg = document.querySelectorAll(".desserts__image");
-const qtyBtns = document.querySelectorAll(".desserts__quantity");
+const decrementBtn = document.querySelectorAll(".desserts__qty-decrement");
+const incrementBtn = document.querySelectorAll(".desserts__qty-increment");
+const itemQtyValue = document.querySelectorAll(".desserts__qty-value");
+
+const emptyCart = document.querySelector(".cart__empty");
+const fullCart = document.querySelector(".cart__items");
+const cartItemCount = document.querySelector(".cart__count");
+const removeItemsBtn = document.querySelectorAll(".cart__remove-btn");
+const cartItemQty = document.querySelectorAll(".cart__item-qty");
+const cartPriceUnit = document.querySelectorAll(".cart__item-price-unit");
+const cartPriceTotal = document.querySelectorAll(".cart__item-price-total");
+const orderTotal = document.querySelector(".cart__total-price");

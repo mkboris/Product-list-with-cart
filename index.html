@@ -55,6 +55,8 @@
 
                 <button class="cart__remove-btn">
                   <svg
+                    aria-hidden="true"
+                    focusable="false"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -89,6 +91,8 @@
 
                 <button class="cart__remove-btn">
                   <svg
+                    aria-hidden="true"
+                    focusable="false"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -118,7 +122,7 @@
             <div class="cart__carbon">
               <img
                 src="assets/images/icon-carbon-neutral.svg"
-                alt="Carbon neutral"
+                alt=""
                 class="cart__carbon-img"
               />
               <p class="cart__carbon-text">
@@ -128,7 +132,7 @@
               </p>
             </div>
 
-            <button id="confirmBtn" class="cart__btn">Confirm Order</button>
+            <button class="cart__btn open-dialog">Confirm Order</button>
           </div>
         </div>
       </section>
@@ -140,7 +144,7 @@
           <img
             class="dialog__image"
             src="assets/images/icon-order-confirmed.svg"
-            alt="Order Confirmed"
+            alt=""
           />
           <h2 class="dialog__title">Order Confirmed</h2>
           <p class="dialog__message">We hope you enjoy your food!</p>
@@ -157,13 +161,17 @@
               <div class="cart-item__details">
                 <p class="cart-item__name">Classic Tiramisu</p>
                 <div class="cart-item__quantity">
-                  <p class="cart-item__qty">2x</p>
-                  <span class="cart-item__price-unit">@$5.50</span>
+                  <p class="cart-item__qty cart__item-qty">2x</p>
+                  <span class="cart-item__price-unit cart__item-price-unit"
+                    >@$5.50</span
+                  >
                 </div>
               </div>
             </div>
 
-            <span class="cart-item__price-total">$5.50</span>
+            <span class="cart-item__price-total cart__item-price-total"
+              >$5.50</span
+            >
           </div>
 
           <hr class="cart__divider" />
@@ -174,7 +182,7 @@
           </div>
         </div>
 
-        <button autofocus id="newBtn" class="dialog__btn cart__btn">
+        <button autofocus class="cart__btn close-dialog">
           Start New Order
         </button>
       </div>
