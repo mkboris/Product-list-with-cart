@@ -238,7 +238,6 @@ body {
   border-radius: var(--space-5xl);
   cursor: pointer;
   transition: all 0.3s ease;
-  /* display: none; */
 }
 
 .desserts__cart-btn:hover {
@@ -246,7 +245,7 @@ body {
   border: 1px solid var(--red);
 }
 
-.desserts__cart-btn:focus {
+.desserts__cart-btn:focus-visible {
   outline: 2px dotted var(--red);
   outline-offset: 2px;
 }
@@ -274,6 +273,14 @@ body {
   border-radius: 100%;
   background: transparent;
   transition: all 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 .qty-crement:hover {
@@ -355,7 +362,6 @@ body {
   align-items: center;
   gap: var(--space-lg);
   text-align: center;
-  display: none;
 }
 
 .cart__empty-text {
@@ -369,7 +375,13 @@ body {
   flex-direction: column;
   gap: var(--space-xl);
   width: 100%;
-  /* display: none; */
+}
+
+.cart__selected {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-xl);
 }
 
 .cart__item-wrap {
@@ -574,10 +586,18 @@ body.dialog-open {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: var(--space-xl);
   gap: var(--space-xl);
   background: var(--rose-50);
   border-radius: var(--space-sm);
+}
+
+.dialog__cart-wrap {
+  background: var(--rose-50);
+  padding: var(--space-xl);
+  border-radius: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
 .cart-item {
@@ -593,7 +613,7 @@ body.dialog-open {
 }
 
 .cart-item__image {
-  width: 3rem;
+  height: 3rem;
   border-radius: var(--space-xs);
 }
 
