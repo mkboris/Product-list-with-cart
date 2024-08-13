@@ -46,7 +46,7 @@ function addItems(data) {
     
         <div class="desserts__actions">
           <button class="desserts__cart-btn">
-            <img src="assets/images/icon-add-to-cart.svg" alt="Add to Cart" />
+            <img src="assets/images/icon-add-to-cart.svg" alt="" />
             Add to Cart
           </button>
     
