@@ -27,13 +27,14 @@
 
         <div class="cart">
           <h2 class="cart__title">
-            Your Cart (<span class="cart__count">0</span>)
+            Your Cart (<span class="cart__count" aria-live="polite">0</span>)
           </h2>
 
           <div class="cart__empty">
             <img
               src="assets/images/illustration-empty-cart.svg"
-              alt="Empty cart"
+              alt=""
+              role="presentation"
               class="cart__empty-img"
             />
             <p class="cart__empty-text">Your added items will appear here</p>
@@ -44,7 +45,7 @@
           <div class="cart__selected">
             <div class="cart__total">
               <p class="cart__total-label">Order Total</p>
-              <p class="cart__total-price">$0.00</p>
+              <p class="cart__total-price" aria-live="polite">$0.00</p>
             </div>
 
             <div class="cart__carbon">
@@ -66,7 +67,11 @@
       </section>
     </main>
 
-    <dialog class="dialog">
+    <dialog
+      class="dialog"
+      aria-labelledby="dialog-title"
+      aria-describedby="dialog-message"
+    >
       <div class="dialog__content">
         <div class="dialog__header">
           <img
@@ -74,8 +79,10 @@
             src="assets/images/icon-order-confirmed.svg"
             alt=""
           />
-          <h2 class="dialog__title">Order Confirmed</h2>
-          <p class="dialog__message">We hope you enjoy your food!</p>
+          <h2 id="dialog-title" class="dialog__title">Order Confirmed</h2>
+          <p id="dialog-message" class="dialog__message">
+            We hope you enjoy your food!
+          </p>
         </div>
 
         <div class="dialog__cart-wrap">
@@ -85,7 +92,7 @@
 
           <div class="cart__total">
             <p class="cart__total-label">Order Total</p>
-            <p class="cart__total-price">$0.00</p>
+            <p class="cart__total-price" aria-live="polite">$0.00</p>
           </div>
         </div>
 

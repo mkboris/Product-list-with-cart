@@ -2,18 +2,24 @@
   font-family: "RedHatText";
   src: url("assets/fonts/static/RedHatText-Regular.ttf");
   font-weight: var(--fw-sm);
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "RedHatText";
   src: url("assets/fonts/static/RedHatText-SemiBold.ttf");
   font-weight: var(--fw-md);
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "RedHatText";
   src: url("assets/fonts/static/RedHatText-Bold.ttf");
   font-weight: var(--fw-lg);
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
