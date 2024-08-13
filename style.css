@@ -324,7 +324,7 @@ body {
 
 .desserts__category {
   font-weight: var(--fw-sm);
-  font-size: var(--fw-sm);
+  font-size: var(--text-sm);
   line-height: var(--lh-sm);
   color: var(--rose-500);
 }
