@@ -267,6 +267,11 @@ function removeCartItem(event) {
   parentItem.querySelector(".desserts__cart-btn").style.display = "flex";
   parentItem.querySelector(".desserts__quantity").style.display = "none";
 
+  const quantityValue = parentItem.querySelector(".desserts__qty-value");
+  if (quantityValue) {
+    quantityValue.textContent = "1";
+  }
+
   const imageToDeselect = document.querySelector(
     `.desserts__image[data-index="${itemIndex}"]`
   );
