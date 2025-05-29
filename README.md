@@ -28,7 +28,6 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/solutions/product-list-with-cart-5Eg5Sp2dOU)
 - [Live Site](https://product-list-with-cart-swart.vercel.app/)
 
 ### Built with
@@ -41,4 +40,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@mkboris](https://www.frontendmentor.io/profile/mkboris)
+- Frontend Mentor - [makogeboris](https://www.frontendmentor.io/profile/makogeboris)
+- Twitter - [makogeboris](https://x.com/makogeboris)
